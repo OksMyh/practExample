@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+{{#if allUsers}}
+
+    {{#each allUsers}}
+        {{this.name}}
+        <br>
+        {{this.email}}
+        <br>
+        {{this.password}}
+        <br>
+        <a href="/delete/{{this.id}}">
+            DELETE USER
+        </a>
+        <p></p>
+    {{/each}}
+
+{{else}} NO USERS IN DATA BASE <br>
+
+{{/if}}
+
+
+<a href="/">HOME PAGE</a>
+
+
+</body>
+</html>
